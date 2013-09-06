@@ -9,6 +9,9 @@
     .box-title
       = @application.name
     .box-content{style: "height: 300px;"}
-      #chart1
-      = render 'pie_chart'
+      #chart1.chart
+        = render 'pie_chart'
+      #chart2.chart
+        = render 'bar_chart'
+
 
