@@ -13,3 +13,4 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/"C:\\nppdf32Log\\debuglog.txt"
