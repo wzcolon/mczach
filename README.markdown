@@ -40,5 +40,9 @@ To submit a request make a POST request to http://polar-depths-8384.herokuapp.co
 The JSON payload should be similar to the following; however you may wish to change the values being sumbitted including the application name. Please note that the 'api key' is mandatory.
 
 ``
-curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d "{\"request_data\":{\"time_in_ruby\":20,\"time_in_db\":3,\"time_rendering\":200,\"application_name\":\"SomeApp\"},\"api_key\":\"644721eedb95f223d45b4461a03ea1995e1ffe159d1a1dd3bcfbc89ed0222926\"}" http://polar-depths-8384.herokuapp.com/api/logs/log
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST
+-d "{\"request_data\":{\"time_in_ruby\":20,\"time_in_db\":3,\"time_rendering\":200,\
+"application_name\":\"SomeApp\"},\"api_key\":\
+"644721eedb95f223d45b4461a03ea1995e1ffe159d1a1dd3bcfbc89ed0222926\"}" 
+http://polar-depths-8384.herokuapp.com/api/logs/log
 ``
