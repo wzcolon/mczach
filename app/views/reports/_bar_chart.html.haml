@@ -1,15 +1,16 @@
 :javascript
   $(document).ready(function(){
-    var s1 = [#{average_time(@time_in_ruby)}];
-    var s2 = [#{average_time(@time_in_db)}];
-    var s3 = [#{average_time(@time_rendering)}];
+    var s1 = [#{average_time(@time_in_ruby)}, 0];
+    var s2 = [#{average_time(@time_in_db)}, 0];
+    var s3 = [#{average_time(@time_rendering)}, 0];
+    var ticks = ["#{@application.name}"];
     plot2 = jQuery.jqplot ('chart2', [s1, s2, s3], 
       {
         stackSeries: true,
         seriesDefaults: {
           renderer: jQuery.jqplot.BarRenderer,
           rendererOptions: {
-            barMargin: 30
+            barMargin: 60
           },
           pointLabels: {show: true}
         },
@@ -20,7 +21,6 @@
         ],
         axis: {
           xaxis: {
-            renderer: $.jqplot.CategoryAxisRenderer
           },
           yaxis: {
             padMin: 0

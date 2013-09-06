@@ -15,6 +15,7 @@
 //= require jqplot
 //= require jqplot/plugins/barRenderer
 //= require jqplot/plugins/categoryAxisRenderer
+//= require jqplot/plugins/dateAxisRenderer
 //= require jqplot/plugins/pieRenderer
 //= require jqplot/plugins/pointLabels
 //= require bootstrap
