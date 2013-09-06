@@ -1,6 +1,5 @@
 :javascript
   $(document).ready(function(){
-    console.log( "#{@time_in_ruby}")
     var data = [
       ['Time in Ruby', #{average_time(@time_in_ruby)}], ['Time in Database', #{average_time(@time_in_db)}], ['Time Rendering', #{average_time(@time_rendering)}]
     ];
@@ -9,9 +8,7 @@
         seriesDefaults: {
           renderer: jQuery.jqplot.PieRenderer,
           rendererOptions: {
-            showDataLabels: true,
-            dataLabels: 'value'
-
+            showDataLabels: true
           }
         },
         legend: { show:true, location: 'e' }

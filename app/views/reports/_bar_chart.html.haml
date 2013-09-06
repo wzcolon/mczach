@@ -1,0 +1,35 @@
+:javascript
+  $(document).ready(function(){
+    var s1 = [#{average_time(@time_in_ruby)}];
+    var s2 = [#{average_time(@time_in_db)}];
+    var s3 = [#{average_time(@time_rendering)}];
+    plot2 = jQuery.jqplot ('chart2', [s1, s2, s3], 
+      {
+        stackSeries: true,
+        seriesDefaults: {
+          renderer: jQuery.jqplot.BarRenderer,
+          rendererOptions: {
+            barMargin: 30
+          },
+          pointLabels: {show: true}
+        },
+        series: [
+         {label:'Time in Ruby'},
+         {label:'Time in Database'},
+         {label:'Time Rendering'}
+        ],
+        axis: {
+          xaxis: {
+            renderer: $.jqplot.CategoryAxisRenderer
+          },
+          yaxis: {
+            padMin: 0
+          }
+        },
+        legend: { 
+          show:true, 
+          location: 'e',
+          placement: 'outside'
+        }
+    });
+  });
