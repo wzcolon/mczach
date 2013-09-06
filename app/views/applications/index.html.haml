@@ -1,0 +1,33 @@
+.span3
+  .box
+    .box-title
+      About The Author
+    .box-content
+      .img
+        = link_to image_tag('zach.jpg', width: "190"), 'http://github.com/wzcolon'
+      .contact-info
+        %h4 Contact Info
+        %ul.no-bullets
+          %li Phone 704.916.9224
+          %li Email zcolon80@gmail.com
+          %li
+            = link_to "Github Profile", 'http://github.com/wzcolon'
+          %li
+            = link_to "LinkedIn Profile", 'http://linkedin.com/pub/zach-colon/40/33/240'
+.span9
+  .box
+    .box-title
+      Applications
+    .box-content
+      %table.table.table-bordered
+        %thead
+          %tr
+            %th Application Name
+            %th Number of Requests
+        %tbody
+          - @applications.each do |app|
+            %tr
+              %td
+                = link_to app.name, application_report_path(app)
+              %td
+                = app.request_logs.count

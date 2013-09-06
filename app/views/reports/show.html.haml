@@ -1,0 +1,14 @@
+.span3
+  .box
+    .box-title
+      = "#{@application.name} Menu"
+    .box-content
+      = link_to "Home", root_path
+.span9
+  .box
+    .box-title
+      = @application.name
+    .box-content{style: "height: 300px;"}
+      #chart1
+      = render 'pie_chart'
+
