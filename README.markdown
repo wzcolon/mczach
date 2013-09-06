@@ -1,4 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/wzcolon/mczach.png)](https://codeclimate.com/github/wzcolon/mczach)
+[![Build Status](https://travis-ci.org/wzcolon/mczach.png?branch=master)](https://travis-ci.org/wzcolon/mczach)
 
 #McZach
 
