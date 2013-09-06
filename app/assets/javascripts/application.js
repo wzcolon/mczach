@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jqplot
+//= require jqplot/plugins/barRenderer
+//= require jqplot/plugins/categoryAxisRenderer
+//= require jqplot/plugins/pieRenderer
+//= require bootstrap
 //= require_tree .
