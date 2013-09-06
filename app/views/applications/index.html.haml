@@ -25,9 +25,10 @@
             %th Application Name
             %th Number of Requests
         %tbody
-          - @applications.each do |app|
-            %tr
-              %td
-                = link_to app.name, application_report_path(app)
-              %td
-                = app.request_logs.count
+          - if !@applications.empty?
+            - @applications.each do |app|
+              %tr
+                %td
+                  = link_to app.name, application_report_path(app)
+                %td
+                  = app.request_logs.count
