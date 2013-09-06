@@ -8,7 +8,8 @@
   .box
     .box-title
       = @application.name
-    .box-content{style: "height: 300px;"}
+    .box-content{style: "height: 350px;"}
+      %h4 Charts show averages of submitted requests.
       #chart1.chart
         = render 'pie_chart'
       #chart2.chart
