@@ -3,7 +3,7 @@
     var s1 = [#{average_time(@time_in_ruby)}, 0];
     var s2 = [#{average_time(@time_in_db)}, 0];
     var s3 = [#{average_time(@time_rendering)}, 0];
-    var ticks = ["#{@application.name}"];
+    var ticks = ["#{@application.name} average request breakdown (ms)"];
     plot2 = jQuery.jqplot ('chart2', [s1, s2, s3], 
       {
         stackSeries: true,
@@ -19,8 +19,10 @@
          {label:'Time in Database'},
          {label:'Time Rendering'}
         ],
-        axis: {
+        axes: {
           xaxis: {
+            renderer: $.jqplot.CategoryAxisRenderer,
+            ticks: ticks
           },
           yaxis: {
             padMin: 0
