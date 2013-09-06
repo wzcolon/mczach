@@ -32,6 +32,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry'
   gem 'launchy'
+  gem 'bullet'
 
   gem 'capybara', '~> 2.1.0'
 end

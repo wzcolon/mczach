@@ -34,7 +34,7 @@ To demo the app visit [the app here](http://polar-depths-8384.herokuapp.com/).
 Several applications should be viewable from previously submitted requests.
 Click on an application's name to view its reports.
 
-To submit a request make a POST request to http://polar-depths-8384.herokuapp.com/api/logs/log via curl or by visiting an online service such as [Hurl It](http://hurl.it/).The JSON payload should be similar to the following; however you may wish to change the values being sumbitted including the application name. Please note that all fields are required including the 'api key' for a successful request.
+To submit a request make a POST request to http://polar-depths-8384.herokuapp.com/api/logs/log via curl or by visiting an online service such as [Hurl It](http://hurl.it/).The JSON payload should be similar to the following; however you may wish to change the values being sumbitted including the application name. Please note that all fields are required including the 'api key' for a successful request. Values for time should be submitted in milliseconds in integer form.
 
 ```
 curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d "{\"request_data\":{\"time_in_ruby\":20,\"time_in_db\":3,\"time_rendering\":200,\"application_name\":\"SomeApp\"},\"api_key\":\"644721eedb95f223d45b4461a03ea1995e1ffe159d1a1dd3bcfbc89ed0222926\"}" http://polar-depths-8384.herokuapp.com/api/logs/log
