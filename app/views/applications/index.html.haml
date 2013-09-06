@@ -3,16 +3,23 @@
     .box-title
       About The Author
     .box-content
+      .center
       .img
         = link_to image_tag('zach.jpg', width: "190"), 'http://github.com/wzcolon'
       .contact-info
         %h4 Contact Info
-        %ul.no-bullets
-          %li Phone 704.916.9224
-          %li Email zcolon80@gmail.com
+        %ul.no-bullets.no-indent
           %li
+            %i.icon-briefcase
+            704.916.922
+          %li 
+            %i.icon-envelope
+            = mail_to 'zcolon80@gmail.com'
+          %li
+            %i.icon-share
             = link_to "Github Profile", 'http://github.com/wzcolon'
           %li
+            %i.icon-share
             = link_to "LinkedIn Profile", 'http://linkedin.com/pub/zach-colon/40/33/240'
 .span9
   .box
