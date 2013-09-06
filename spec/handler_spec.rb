@@ -27,11 +27,9 @@ describe Handler do
     end
 
     describe 'log' do
-      before :each do 
-        handler.log
-      end
 
       it 'saves a log record' do
+        handler.log
         expect(RequestLog.last.time_in_ruby).to eq(20)
       end
 
@@ -47,20 +45,34 @@ describe Handler do
       context 'when an application does not exist in the db' do
 
         it 'adds a new log record' do
-          count = RequestLog.all.count
-          handler.log
+          count = RequestLog.all.count handler.log
           expect(RequestLog.all.count).to eq(count + 1)
         end
 
 
         it 'adds a new application record' do
-          pending 'fix this test'
           handler.application_name = "Bob's App"
-          binding.pry
           handler.log
           expect(Application.last.name).to eq("Bob's App")
         end
       end
+
+      describe 'check_for_errors' do
+
+        let(:request_data) {
+          {
+            application_name: 'CrazyApp',
+            time_in_db:   3,
+            time_rendering: 100
+          }
+        }
+
+        it 'adds to the error array when part of the expected request is missing' do
+          handler.log
+          expect(handler.errors).to include('time_in_ruby cannot be nil.')
+        end
+      end
+
     end
   end
 end

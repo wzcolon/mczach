@@ -24,10 +24,9 @@ describe Api::LogsController do
     context "when unsuccessful" do
       
       it 'returns a error message' do
-        pending
-        request_data[:name] = 32
+        request_data.delete(:application_name)
         post "/api/logs/log", request_data: request_data
-        expect(response.body).to include("error")
+        expect(response.body).to include("application_name cannot be nil.")
       end
 
       it 'saves a log' do

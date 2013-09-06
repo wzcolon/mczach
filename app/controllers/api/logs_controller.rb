@@ -1,10 +1,10 @@
 class Api::LogsController < ApiController
 
   def log
-    if handler.log
+    if handler.check_for_errors && handler.log
       render json: handler.results
     else
-      render json: {errors: handler.errors}
+      render json: {errors: handler.errors}, status: 400
     end
   end
 
