@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/wzcolon/mczach.png)](https://codeclimate.com/github/wzcolon/mczach)
+
 #McZach
 
 ##Goals
@@ -13,7 +15,7 @@
 ##Construction
 
 To support logging for multiple web applications, two tables were created -
-'applications' and 'request logs'. A 'has many' relationship exists in that a
+'applications' and 'request logs'. A 'has many' relationship exists in that an
 application has many request logs. As requests are processed the submitted
 application name is checked against the database or added to it in the Logger
 class.
@@ -27,7 +29,7 @@ a helper method provides the means to average the attributes displayed.
 
 Tests were created to test the models and Logger class.
 
-##Demoing the App
+##Demo the App
 
 To demo the app visit [the app here](http://polar-depths-8384.herokuapp.com/).
 
