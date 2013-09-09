@@ -15,8 +15,12 @@
                 %i.icon-briefcase
                 704.916.9224
               %li 
-                %i.icon-envelope
-                = mail_to 'zcolon80@gmail.com'
+                .visible-desktop
+                  %i.icon-envelope
+                  = mail_to 'zcolon80@gmail.com'
+                .hidden-desktop
+                  %i.icon-envelope
+                  = mail_to 'Email', 'zcolon80@gmail.com'
               %li
                 %i.icon-share
                 = link_to "Github Profile", 'http://github.com/wzcolon'
